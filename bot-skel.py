@@ -22,7 +22,12 @@ import code         # code.interact
 import os           # environment variables
 import inspect      # call stack inspection
 import random       # dumb random number generator
-
+import argparse
+parser =argparse.ArgumentParser()
+parser.add_argument("--verbosity", help="increase output verbosity")
+args = parser.parse_args()
+if args.verbosity:
+	print("verbosity turned on")
 from discord.ext import commands    # Bot class and utils
 
 ################################################################################
